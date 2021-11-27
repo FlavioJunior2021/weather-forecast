@@ -6,8 +6,8 @@ export async function userCity() {
         temp: json.results.temp,
         description: json.results.description,
         currently: json.results.currently,
-        city: json.results.city,
-        humidity: json.results.humidity
+        city: json.results.city_name,
+        humidity: json.results.humidity,
     }
     return filteredjson;
 };

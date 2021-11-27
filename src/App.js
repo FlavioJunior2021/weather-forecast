@@ -40,13 +40,14 @@ function App() {
           </div>
       </header>
       <main className="main-content">
-         <h2>
-           {city}
-           {temp}
-           {description}
-           {humidity}
-           {currently}
-         </h2>
+        <div className="result-temp">
+          <h1>
+            {city}
+          </h1>
+          <h2>
+            {temp}°
+          </h2>
+        </div>
       </main>
     </div>
   );

@@ -25,4 +25,26 @@
             }
         }
     }
+    .main-content{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .result-temp{
+
+            padding: 16px;
+            text-align: center;
+
+            >h1{
+                font-size: 32px;
+                color: #fff;
+            }
+            >h2{
+                margin-top: 18px;
+                font-size: 64px;
+                color: #fff;
+            }
+        }
+    }
 }
