@@ -3,6 +3,10 @@ import { searchCity, userCity } from './Services/API';
 
 import logo from './Assets/images/w.svg';
 import menu from './Assets/images/menu.svg';
+import sunset from './Assets/images/sunset.svg';
+import sun from './Assets/images/sun.svg';
+import moon from './Assets/images/moon.svg';
+
 
 import './Scss/App.scss';
 
@@ -14,6 +18,8 @@ function App() {
   const [description, setDescription] = useState(null);
   const [currently, setCurrently] = useState(null);
   const [humidity,setHumidity] = useState(null);
+  const [sunrise,setSunrise] = useState(null);
+  const [sunset,setSunset] = useState(null);
 
   useEffect(() => {
     async function fetchAPI(){
@@ -22,7 +28,9 @@ function App() {
       setTemp(response.temp);
       setDescription(response.description);
       setCurrently(response.currently);
-      setHumidity(response.humidity)
+      setHumidity(response.humidity);
+      setSunset(response.sunset);
+      setSunrise(response.sunrise)
     }
     fetchAPI();
   },[city])

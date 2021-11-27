@@ -37,13 +37,26 @@
             text-align: center;
 
             >h1{
-                font-size: 32px;
+                font-size: 22px;
                 color: #fff;
+                font-family: 'Poppins', sans-serif; 
             }
             >h2{
                 margin-top: 18px;
                 font-size: 64px;
                 color: #fff;
+            }
+            .sunrise-sunset{
+
+                display: flex;
+                padding-top: 36px;
+
+                .separator{
+                    border: 0;
+                    height: 2px;
+                    width: 300px;
+                    background-image: linear-gradient(to right, transparent, #CCC, transparent);  
+                }
             }
         }
     }
