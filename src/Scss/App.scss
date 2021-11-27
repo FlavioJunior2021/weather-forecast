@@ -1,0 +1,28 @@
+#App{
+
+    display: flex;
+    flex-direction: column;
+
+    .header{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        padding: 26px;
+
+        .logo{
+            >img{
+                width: 46px;
+            }
+        }
+        .menu{
+            button{
+                border: none;
+                >img{
+                    width: 46px;
+                }
+            }
+        }
+    }
+}
