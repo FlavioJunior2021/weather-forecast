@@ -1,15 +1,7 @@
 import React, { useState , useEffect } from 'react';
 import { searchCity, userCity } from './Services/API';
 
-import logo from './Assets/images/w.svg';
-import menu from './Assets/images/menu.svg';
-import sunset from './Assets/images/sunset.svg';
-import sun from './Assets/images/sun.svg';
-import moon from './Assets/images/moon.svg';
-
-
-import './Scss/App.scss';
-
+import { MainComponent } from './Components/PrincipalContent/index'
 
 function App() {
 
@@ -37,26 +29,7 @@ function App() {
 
   return (
     <div id="App">
-      <header className="header">
-          <div className="logo">
-              <img src={ logo } alt="logo.svg" />
-          </div>
-          <div className="menu">
-              <button className="menu-btn">
-                <img src={ menu } alt="menu.svg" />
-              </button>
-          </div>
-      </header>
-      <main className="main-content">
-        <div className="result-temp">
-          <h1>
-            {city}
-          </h1>
-          <h2>
-            {temp}°
-          </h2>
-        </div>
-      </main>
+      <MainComponent />
     </div>
   );
 }
