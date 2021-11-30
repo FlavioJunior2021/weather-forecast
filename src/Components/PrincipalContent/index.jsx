@@ -12,6 +12,7 @@ export function MainComponent(){
     const [city, setCity] = useState(null);
     const [temp, setTemp] = useState(null);
     const [condition, setCondition] = useState(null);
+    const [description, setDescription] = useState(null);
 
     useEffect(() => {
         async function fetchAPI(){
@@ -19,13 +20,26 @@ export function MainComponent(){
           setCity(response.city);
           setTemp(response.temp);
           setCondition(response.condition);
+          setDescription(response.description);
         }
         fetchAPI();
-      },[city])
+      },[city,temp,condition,description])
+
       function filterCondition(value){
         if(/^(\-|\+)?([0-9]+|Infinity)$/.test(value))
         return Number(value);
         return NaN;
+      }
+
+      function numberCondition(){
+        let filteredCondition = filterCondition(condition);
+        if(filteredCondition < 25){
+          return cold
+        }else if(filteredCondition > 25 && filteredCondition < 29){
+          return cloudy
+        }else{
+          return sun
+        }
       }
 
     return(
@@ -33,6 +47,8 @@ export function MainComponent(){
             <div className="container">
                 <h1>{city}</h1>
                 <h2>{temp}°</h2>
+                <img src={numberCondition()} alt="" />
+                <span>{description}</span>
             </div>
         </div>
     );
