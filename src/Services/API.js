@@ -10,7 +10,15 @@ export async function userCity() {
         condition: json.results.condition_code,
         humidity: json.results.humidity,
         sunrise: json.results.sunrise,
-        sunset: json.results.sunset
+        sunset: json.results.sunset,
+        forecast: [
+            {
+                date: json.results.forecast[0].date,
+                weekday: json.results.forecast[0].weekday,
+                description: json.results.forecast[0].description,
+                min: json.results.forecast[0].min
+            }
+        ]
     }
 
     return filteredjson;
