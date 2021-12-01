@@ -35,7 +35,7 @@ export function MainComponent(){
         let filteredCondition = filterCondition(condition);
         if(filteredCondition < 25){
           return cold
-        }else if(filteredCondition > 25 && filteredCondition < 29){
+        }else if(filteredCondition => 25 && filteredCondition <= 29){
           return cloudy
         }else{
           return sun

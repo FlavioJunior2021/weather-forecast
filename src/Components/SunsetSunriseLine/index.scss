@@ -1,0 +1,22 @@
+#container{
+    display: flex;
+    flex-direction: row;
+   
+    padding-top: 18px;
+    margin: 18px;
+
+    .sunrise,.sunset{
+
+       display: flex;
+       flex-direction: column;
+
+       margin: 0 auto;
+       
+       p,span{
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+       }
+    }
+}
