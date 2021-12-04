@@ -9,10 +9,10 @@ import './index.scss';
 
 export function MainComponent(){
 
-    const [city, setCity] = useState(null);
-    const [temp, setTemp] = useState(null);
-    const [condition, setCondition] = useState(null);
-    const [description, setDescription] = useState(null);
+    const [city, setCity] = useState("");
+    const [temp, setTemp] = useState(0);
+    const [condition, setCondition] = useState("");
+    const [description, setDescription] = useState("");
 
     useEffect(() => {
         async function fetchAPI(){
