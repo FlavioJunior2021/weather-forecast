@@ -7,7 +7,7 @@ export function DayComponent({
     weekday,
     description,
     min,
-    max
+    max,
 }){
     return(
         <div id="days-line">

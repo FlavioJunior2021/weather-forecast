@@ -1,5 +1,5 @@
 export async function userCity() {
-    const req = await fetch('https://api.hgbrasil.com/weather?format=json-cors&key=2a65ec29&user_ip=remote')
+    const req = await fetch('https://api.hgbrasil.com/weather?format=json-cors&key=cdffd866&user_ip=remote')
     const json = await req.json();
     const filteredjson = {
         temp: json.results.temp,
@@ -16,9 +16,9 @@ export async function userCity() {
 };
 
 export async function getForecast(day){
-    const req = await fetch('https://api.hgbrasil.com/weather?format=json-cors&key=2a65ec29&user_ip=remote')
+    const req = await fetch('https://api.hgbrasil.com/weather?format=json-cors&key=cdffd866&user_ip=remote')
     const json = await req.json();
-    let forecast = [
+    const forecast = [
         {
             date: json.results.forecast[day].date,
             weekday: json.results.forecast[day].weekday,
@@ -31,7 +31,7 @@ export async function getForecast(day){
 }
 
 export async function searchCity(name){
-    const req = await fetch(`https://api.hgbrasil.com/weather?format=json-cors&key=2a65ec29&city_name=${name}`)
+    const req = await fetch(`https://api.hgbrasil.com/weather?format=json-cors&key=cdffd866&city_name=${name}`)
     const json = await req.json();
     return json;
 };
